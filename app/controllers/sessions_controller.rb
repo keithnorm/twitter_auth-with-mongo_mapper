@@ -17,7 +17,6 @@ class SessionsController < ApplicationController
   end
 
   def create
-    debugger
     logout_keeping_session!
     if user = User.authenticate(params[:login], params[:password])
       self.current_user = user
